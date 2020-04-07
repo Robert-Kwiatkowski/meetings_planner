@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-# Create your views here.
-
 
 def welcome(request):
-    return HttpResponse("Welcome to the meeting planner")
+    return HttpResponse("Welcome to the meetings planner")
