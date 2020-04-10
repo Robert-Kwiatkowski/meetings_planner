@@ -5,4 +5,4 @@ from meetings.models import Meeting
 
 def welcome(request):
     return render(request, "website/welcome.html",
-                  {"num_meetings": Meeting.objects.count()})
+                  {"meetings": Meeting.objects.all()})
