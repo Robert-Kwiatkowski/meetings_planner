@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome!</title>
-</head>
-<body>
-<h1>Welcome to the Meeting Planner!</h1>
+{% extends "base.html" %}
+{% load static %}
 
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Meeting Planner!</h1>
+<img src="{% static 'website/calendar.png' %}" width="100px">
 <h2>Meetings</h2>
 <ul>
     {% for meeting in meetings %}
@@ -18,5 +17,4 @@
     {% endfor %}
 </ul>
  <a href="{% url 'rooms' %}">Rooms list</a>
-</body>
-</html>
+{% endblock %}
